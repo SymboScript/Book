@@ -5,10 +5,11 @@
   - [Tokens](specification/tokens/readme.md)
 
     - [Token format](specification/tokens/token-format.md)
-    - [Operators](specification/tokens/operators.md)
-    - [Keywords](specification/tokens/keywords.md)
-    - [Identifiers](specification/tokens/identifiers.md)
-    - [Literals](specification/tokens/literals.md)
-    - [Brackets](specification/tokens/brackets.md)
+    - [Token Kinds](specification/tokens/token-kinds.md)
+      - [Operators](specification/tokens/kinds/operators.md)
+      - [Keywords](specification/tokens/kinds/keywords.md)
+      - [Identifiers](specification/tokens/kinds/identifiers.md)
+      - [Literals](specification/tokens/kinds/literals.md)
+      - [Brackets](specification/tokens/kinds/brackets.md)
 
   - [Examples](examples/readme.md)
