@@ -6,17 +6,18 @@ In SymboScript exists only three kinds of token literals: strings, numbers, bool
 
 Strings are enclosed in double quotes, single quotes or backticks.
 
-```ts
-"hello";
-"hello"`hello`;
-("hello\nworld");
-('hello"world');
-("hello ' world");
+```symboscript
+"hello"
+"hello"
+`hello`
+"hello\nworld"
+'hello"world'
+"hello ' world"
 ```
 
 ## Numbers
 
-```ts
+```symboscript
 1 .1
 1.1
 1e1
@@ -27,7 +28,7 @@ Strings are enclosed in double quotes, single quotes or backticks.
 
 ## Booleans
 
-```ts
-true;
-false;
+```symboscript
+true
+false
 ```
