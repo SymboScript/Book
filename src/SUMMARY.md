@@ -12,4 +12,6 @@
       - [Literals](specification/tokens/kinds/literals.md)
       - [Brackets](specification/tokens/kinds/brackets.md)
 
+  - [Parser](specification/parser/readme.md)
+
   - [Examples](examples/readme.md)
