@@ -6,8 +6,8 @@
 
 | Operator/Expression                    | Associativity | Parser fn name | Impl |
 | -------------------------------------- | ------------- | -------------- | ---- |
-| Method calls                           | Left to Right | call           | ❌   |
-| Function calls                         | Left to Right | call           | ❌   |
+| Method calls, Members                  | Left to Right | call           | ✅   |
+| Function calls                         | Left to Right | call           | ✅   |
 | `!` `++` `--` `()` `~`                 | Left to Right | factor         | ✅   |
 | `^`                                    | Left to Left  | power          | ✅   |
 | `*` `/` `%`                            | Left to Right | term           | ✅   |
