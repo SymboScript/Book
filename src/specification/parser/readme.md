@@ -22,3 +22,4 @@
 | `..`                                   | Left to Right | range          | ✅   |
 | `?` `:`                                | Left to Right | ternary        | ✅   |
 | `=` `:=` `+=` `-=` `*=` `/=` `^=` `%=` | Right to Left | assign         | ✅?  |
+| `,`                                    | Left to Right | comma          | ✅   |
