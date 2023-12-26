@@ -176,18 +176,24 @@
                         <h1 id="parser"><a class="header" href="#parser">Parser</a></h1>
 <h2 id="expressionss"><a class="header" href="#expressionss">Expressionss</a></h2>
 <h3 id="operator-priority"><a class="header" href="#operator-priority">Operator priority</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Operator/Expression</th><th>Associativity</th><th>Parser fn name</th><th>Evaluation priority</th><th>Implementation</th></tr></thead><tbody>
-<tr><td><code>!</code> <code>++</code> <code>--</code> <code>()</code> Literals Identifiers</td><td>Left to Right</td><td>factor</td><td>1</td><td>✅</td></tr>
-<tr><td><code>^</code></td><td>Left to Left</td><td>power</td><td>2</td><td>✅</td></tr>
-<tr><td><code>*</code> <code>/</code> <code>%</code></td><td>Left to Right</td><td>term</td><td>3</td><td>✅</td></tr>
-<tr><td><code>+</code> <code>-</code></td><td>Left to Right</td><td>add_sub</td><td>4</td><td>✅</td></tr>
-<tr><td><code>&gt;&gt;</code> <code>&lt;&lt;</code></td><td>Left to Right</td><td>shift</td><td>5</td><td>❌</td></tr>
-<tr><td><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code> <code>==</code> <code>!=</code></td><td>Left to Right</td><td>cmp</td><td>6</td><td>❌</td></tr>
-<tr><td><code>&amp;</code></td><td>Left to Right</td><td>bit_and</td><td>7</td><td>❌</td></tr>
-<tr><td><code>|</code></td><td>Left to Right</td><td>bit_or</td><td>8</td><td>❌</td></tr>
-<tr><td><code>==</code> <code>!=</code> <code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></td><td>Left to Right</td><td>cmp</td><td>9</td><td>❌</td></tr>
-<tr><td><code>&amp;&amp;</code></td><td>Left to Right</td><td>logical_and</td><td>10</td><td>❌</td></tr>
-<tr><td><code>||</code></td><td>Left to Right</td><td>logical_or</td><td>11</td><td>❌</td></tr>
+<div class="table-wrapper"><table><thead><tr><th>Operator/Expression</th><th>Associativity</th><th>Parser fn name</th><th>Impl</th></tr></thead><tbody>
+<tr><td>Method calls</td><td>Right to Left</td><td>call</td><td>❌</td></tr>
+<tr><td>Function calls</td><td>Right to Left</td><td>call</td><td>❌</td></tr>
+<tr><td><code>!</code> <code>++</code> <code>--</code> <code>()</code> <code>~</code></td><td>Left to Right</td><td>factor</td><td>✅</td></tr>
+<tr><td><code>^</code></td><td>Left to Left</td><td>power</td><td>✅</td></tr>
+<tr><td><code>*</code> <code>/</code> <code>%</code></td><td>Left to Right</td><td>term</td><td>✅</td></tr>
+<tr><td><code>+</code> <code>-</code></td><td>Left to Right</td><td>add_sub</td><td>✅</td></tr>
+<tr><td><code>&gt;&gt;</code> <code>&lt;&lt;</code></td><td>Left to Right</td><td>shift</td><td>❌</td></tr>
+<tr><td><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code> <code>==</code> <code>!=</code></td><td>Left to Right</td><td>cmp</td><td>❌</td></tr>
+<tr><td><code>&amp;</code></td><td>Left to Right</td><td>bit_and</td><td>❌</td></tr>
+<tr><td><code>bxor</code></td><td>Left to Right</td><td>bit_xor</td><td>❌</td></tr>
+<tr><td><code>|</code></td><td>Left to Right</td><td>bit_or</td><td>❌</td></tr>
+<tr><td><code>==</code> <code>!=</code> <code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></td><td>Left to Right</td><td>cmp</td><td>❌</td></tr>
+<tr><td><code>&amp;&amp;</code></td><td>Left to Right</td><td>logical_and</td><td>❌</td></tr>
+<tr><td><code>||</code></td><td>Left to Right</td><td>logical_or</td><td>❌</td></tr>
+<tr><td><code>..</code></td><td>Left to Right</td><td>range</td><td>❌</td></tr>
+<tr><td><code>?</code> <code>:</code></td><td>Left to Right</td><td>ternary</td><td>❌</td></tr>
+<tr><td><code>=</code> <code>:=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>^=</code> <code>%=</code></td><td>Right to Left</td><td>assign</td><td>❌</td></tr>
 </tbody></table>
 </div>
                     </main>
