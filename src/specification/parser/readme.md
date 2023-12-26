@@ -4,16 +4,22 @@
 
 ### Operator priority
 
-| Operator/Expression                     | Associativity | Parser fn name | Evaluation priority | Implementation |
-| --------------------------------------- | ------------- | -------------- | ------------------- | -------------- |
-| `!` `++` `--` `()` Literals Identifiers | Left to Right | factor         | 1                   | ✅             |
-| `^`                                     | Left to Left  | power          | 2                   | ✅             |
-| `*` `/` `%`                             | Left to Right | term           | 3                   | ✅             |
-| `+` `-`                                 | Left to Right | add_sub        | 4                   | ✅             |
-| `>>` `<<`                               | Left to Right | shift          | 5                   | ❌             |
-| `<` `<=` `>` `>=` `==` `!=`             | Left to Right | cmp            | 6                   | ❌             |
-| `&`                                     | Left to Right | bit_and        | 7                   | ❌             |
-| <code>\|</code>                         | Left to Right | bit_or         | 8                   | ❌             |
-| `==` `!=` `<` `<=` `>` `>=`             | Left to Right | cmp            | 9                   | ❌             |
-| `&&`                                    | Left to Right | logical_and    | 10                  | ❌             |
-| <code>\|\|</code>                       | Left to Right | logical_or     | 11                  | ❌             |
+| Operator/Expression                    | Associativity | Parser fn name | Impl |
+| -------------------------------------- | ------------- | -------------- | ---- |
+| Method calls                           | Right to Left | call           | ❌   |
+| Function calls                         | Right to Left | call           | ❌   |
+| `!` `++` `--` `()` `~`                 | Left to Right | factor         | ✅   |
+| `^`                                    | Left to Left  | power          | ✅   |
+| `*` `/` `%`                            | Left to Right | term           | ✅   |
+| `+` `-`                                | Left to Right | add_sub        | ✅   |
+| `>>` `<<`                              | Left to Right | shift          | ❌   |
+| `<` `<=` `>` `>=` `==` `!=`            | Left to Right | cmp            | ❌   |
+| `&`                                    | Left to Right | bit_and        | ❌   |
+| `bxor`                                 | Left to Right | bit_xor        | ❌   |
+| <code>\|</code>                        | Left to Right | bit_or         | ❌   |
+| `==` `!=` `<` `<=` `>` `>=`            | Left to Right | cmp            | ❌   |
+| `&&`                                   | Left to Right | logical_and    | ❌   |
+| <code>\|\|</code>                      | Left to Right | logical_or     | ❌   |
+| `..`                                   | Left to Right | range          | ❌   |
+| `?` `:`                                | Left to Right | ternary        | ❌   |
+| `=` `:=` `+=` `-=` `*=` `/=` `^=` `%=` | Right to Left | assign         | ❌   |
