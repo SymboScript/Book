@@ -8,6 +8,7 @@
 | -------------------------------------- | ------------- | -------------- | ---- |
 | Method calls, Members                  | Left to Right | call           | ✅   |
 | Function calls                         | Left to Right | call           | ✅   |
+| await                                  | Right to Left | call           | ✅   |
 | `!` `++` `--` `()` `~`                 | Left to Right | factor         | ✅   |
 | `^`                                    | Left to Left  | power          | ✅   |
 | `*` `/` `%`                            | Left to Right | term           | ✅   |
@@ -22,5 +23,5 @@
 | `..`                                   | Left to Right | range          | ✅   |
 | `?:`                                   | Right to Left | ternary        | ✅   |
 | `=` `:=` `+=` `-=` `*=` `/=` `^=` `%=` | Right to Left | assign         | ✅   |
-| await yield                            | Right to Left | await_yield    | ✅   |
+| yield                                  | Right to Left | await_yield    | ✅   |
 | `,`                                    | None          | comma          | ✅   |
