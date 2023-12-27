@@ -20,6 +20,7 @@
 | `&&`                                   | Left to Right | logical_and    | ✅   |
 | <code>\|\|</code>                      | Left to Right | logical_or     | ✅   |
 | `..`                                   | Left to Right | range          | ✅   |
-| `?:`                                   | Left to Right | ternary        | ✅   |
-| `=` `:=` `+=` `-=` `*=` `/=` `^=` `%=` | Right to Left | assign         | ✅?  |
-| `,`                                    | Left to Right | comma          | ✅   |
+| `?:`                                   | Right to Left | ternary        | ✅   |
+| `=` `:=` `+=` `-=` `*=` `/=` `^=` `%=` | Right to Left | assign         | ✅   |
+| await yield                            | Right to Left | await_yield    | ✅   |
+| `,`                                    | None          | comma          | ✅   |
