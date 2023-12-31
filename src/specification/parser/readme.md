@@ -38,10 +38,10 @@
 | Yield statement            | yield_stmt     | Yield         | ✅   |
 | Break statement            | break_stmt     | Break         | ✅   |
 | Continue statement         | continue_stmt  | Continue      | ✅   |
-| If statement               | if_stmt        | If            | ❌   |
-| While statement            | while_stmt     | While         | ❌   |
-| For statement              | for_stmt       | For           | ❌   |
-| Loop statement             | loop_stmt      | Loop          | ❌   |
+| If statement               | if_stmt        | If            | ✅   |
+| While statement            | while_stmt     | While         | ✅   |
+| For statement              | for_stmt       | For           | ✅   |
+| Loop statement             | loop_stmt      | Loop          | ✅   |
 | Try statement              | try_stmt       | Try           | ❌   |
 | Throw statement            | throw_stmt     | Throw         | ❌   |
 | Expression statement       | expr_stmt      | Other         | ✅   |
