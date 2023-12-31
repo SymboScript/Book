@@ -32,7 +32,7 @@
 | Statement                  | Parser fn name | Trigger token | Impl |
 | -------------------------- | -------------- | ------------- | ---- |
 | Variable declaration       | var_decl       | Let           | ✅   |
-| Async function declaration | async_fn_decl  | Async         | ❌   |
+| Async function declaration | fn_decl        | Async         | ✅   |
 | Function declaration       | fn_decl        | Function      | ✅   |
 | Return statement           | return_stmt    | Return        | ✅   |
 | Yield statement            | yield_stmt     | Yield         | ✅   |
@@ -42,6 +42,6 @@
 | While statement            | while_stmt     | While         | ✅   |
 | For statement              | for_stmt       | For           | ✅   |
 | Loop statement             | loop_stmt      | Loop          | ✅   |
-| Try statement              | try_stmt       | Try           | ❌   |
-| Throw statement            | throw_stmt     | Throw         | ❌   |
+| Try statement              | try_stmt       | Try           | ✅   |
+| Throw statement            | throw_stmt     | Throw         | ✅   |
 | Expression statement       | expr_stmt      | Other         | ✅   |
