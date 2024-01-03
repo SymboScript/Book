@@ -179,6 +179,7 @@
 <div class="table-wrapper"><table><thead><tr><th>Operator/Expression</th><th>Associativity</th><th>Parser fn name</th><th>Impl</th></tr></thead><tbody>
 <tr><td>Calls, Identifiers, Literals</td><td>Left to Right</td><td>call</td><td>✅</td></tr>
 <tr><td>Members</td><td>Left to Right</td><td>dot</td><td>✅</td></tr>
+<tr><td>block expr</td><td>Right to Left</td><td>block_expr</td><td>✅</td></tr>
 <tr><td>new</td><td>Right to Left</td><td>new_expr</td><td>✅</td></tr>
 <tr><td>delete</td><td>Right to Left</td><td>delete_expr</td><td>✅</td></tr>
 <tr><td>await</td><td>Right to Left</td><td>await_expr</td><td>✅</td></tr>
@@ -204,6 +205,7 @@
 <tr><td>Variable declaration</td><td>var_decl</td><td>Let</td><td>✅</td></tr>
 <tr><td>Async function declaration</td><td>fn_decl</td><td>Async</td><td>✅</td></tr>
 <tr><td>Function declaration</td><td>fn_decl</td><td>Function</td><td>✅</td></tr>
+<tr><td>Scope declaration</td><td>scope_decl</td><td>Scope</td><td>✅</td></tr>
 <tr><td>Return statement</td><td>return_stmt</td><td>Return</td><td>✅</td></tr>
 <tr><td>Yield statement</td><td>yield_stmt</td><td>Yield</td><td>✅</td></tr>
 <tr><td>Break statement</td><td>break_stmt</td><td>Break</td><td>✅</td></tr>
