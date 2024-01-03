@@ -8,6 +8,7 @@
 | ------------------------------------------------ | ------------- | -------------- | ---- |
 | Calls, Identifiers, Literals                     | Left to Right | call           | ✅   |
 | Members                                          | Left to Right | dot            | ✅   |
+| block expr                                       | Right to Left | block_expr     | ✅   |
 | new                                              | Right to Left | new_expr       | ✅   |
 | delete                                           | Right to Left | delete_expr    | ✅   |
 | await                                            | Right to Left | await_expr     | ✅   |
@@ -34,6 +35,7 @@
 | Variable declaration       | var_decl       | Let           | ✅   |
 | Async function declaration | fn_decl        | Async         | ✅   |
 | Function declaration       | fn_decl        | Function      | ✅   |
+| Scope declaration          | scope_decl     | Scope         | ✅   |
 | Return statement           | return_stmt    | Return        | ✅   |
 | Yield statement            | yield_stmt     | Yield         | ✅   |
 | Break statement            | break_stmt     | Break         | ✅   |
